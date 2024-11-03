@@ -45,6 +45,10 @@ jobs:
       CMAKE_GENERATOR_TOOLSET: "${{ matrix.CMAKE_GENERATOR_TOOLSET }}"
       CMAKE_SYSTEM_VERSION: "${{ matrix.CMAKE_SYSTEM_VERSION }}"
     steps:
+    - name: "Setup Node.js"
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
     - name: "Clone"
       uses: actions/checkout@v3
       with:
